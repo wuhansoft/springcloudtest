@@ -1,1 +1,33 @@
+spring:
+  application:
+    name: userserver
 
+  #security:
+  #basic:
+  #  enabled: true
+  #  user:
+  #    name=root
+  #    password=888888
+
+  datasource:
+    url: jdbc:sqlserver://rdsk5fnq6c2khj6vq75wz4o.sqlserver.rds.aliyuncs.com\smarthome:3433;database=blyapartmenet
+    username: smarthome
+    password: sql2000
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://eureka1:8761/eureka,http://eureka2:8762/eureka
+
+---
+spring:
+  profiles: userserver1
+server:
+  port: 9080
+
+---
+spring:
+  profiles: userserver2
+server:
+  port: 9081
