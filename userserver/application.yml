@@ -28,7 +28,7 @@ server:
 
 ---
 spring:
-  profiles: userserver1
+  profiles: userserver2
 server:
   port: 9081
 
